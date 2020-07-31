@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <meta name="description" content="A new Flutter project." />
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="flutter_web_component" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+  <title>Flutter Web Component</title>
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    #app-container {
+      background-color: cadetblue;
+      margin: 0 auto;
+      border: none;
+    }
+
+    /* override browser default */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* use viewport-relative units to cover page fully */
+    body {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* include border and padding in element width and height */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* full-sized  container that fills up the page */
+    div {
+      height: 100%;
+      width: 100%;
+
+      /* example padding, font-size, background, etc */
+      padding: 10px;
+      font-size: 20px;
+      background-color: lightskyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("flutter_service_worker.js");
+      });
+    }
+  </script>
+  <div id='grid-container' style='display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas: ". app .";'>
+    <flutter-app style="grid-area: app"></flutter-app>
+  </div>
+  <script src="flutter-app.js"></script>
+</body>
+
+</html>
