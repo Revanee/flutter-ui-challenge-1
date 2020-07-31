@@ -889,5 +889,6 @@ DerivedData/
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
 # Track web build
+!build
+build/*
 !build/web
-!build/web/*
