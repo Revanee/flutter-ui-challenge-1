@@ -892,3 +892,4 @@ DerivedData/
 !build
 build/*
 !build/web
+!build/web/**
