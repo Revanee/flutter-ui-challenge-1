@@ -84,25 +84,29 @@ class _MyHomePageState extends State<MyHomePage>
                 child: Column(
                   children: [
                     Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.all(20),
-                        child: TextField(
-                            decoration: InputDecoration(
-                                hintText: "Email or Phone number",
-                                border: InputBorder.none,
-                                contentPadding: EdgeInsets.all(5))),
+                      child: Center(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: TextField(
+                              decoration: InputDecoration(
+                                  hintText: "Email or Phone number",
+                                  border: InputBorder.none,
+                                  contentPadding: EdgeInsets.all(5))),
+                        ),
                       ),
                     ),
                     Divider(),
                     Expanded(
-                        child: Padding(
-                      padding: EdgeInsets.all(20),
-                      child: TextField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                            hintText: "Password",
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(5)),
+                        child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Password",
+                              border: InputBorder.none,
+                              contentPadding: EdgeInsets.all(5)),
+                        ),
                       ),
                     ))
                   ],
