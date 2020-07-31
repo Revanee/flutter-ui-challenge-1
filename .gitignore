@@ -890,3 +890,4 @@ DerivedData/
 
 # Track web build
 !build/web
+!build/web/*
