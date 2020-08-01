@@ -29,4 +29,6 @@ jobs:
     - name: Deploy
       run: |
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/Revanee/flutter-ui-challenge-1.git
+        git add .
+        git commit -m 'Updated webpage'
         git subtree --prefix build/web push secure-origin gh-pages
