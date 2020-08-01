@@ -32,3 +32,4 @@ jobs:
         github_token: ${{ secrets.ACCESS_TOKEN }}
         directory: build/web
         branch: gh-pages
+        force: true
